@@ -1,0 +1,33 @@
+body {
+  font-family: 'Open Sans';
+  font-size: 100%;
+  text-align: center;
+}
+
+header img {
+  height: 5%;
+  width: 5%;
+}
+
+.left-side, .right-side {
+  position: absolute;
+  display: inline-block;
+  width: 50%;
+}
+
+.left-side {
+  left: 0;
+  background: #455A64;
+  height: 100%;
+}
+
+#website-title, #website-url {
+  display: block;
+  margin: 5px auto;
+}
+
+.right-side {
+  right: 0;
+  background: #CFD8DC;
+  height: 100%;
+}

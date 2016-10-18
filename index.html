@@ -6,22 +6,32 @@
     <title>Link List</title>
     <link rel="stylesheet" type="text/css" href="css/reset.css"/>
     <link rel="stylesheet" type="text/css" href="css/main.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800" rel="stylesheet">
   </head>
   <body>
-    <header class="link-creator">
-      <div class="title-container">
-        <h1 class="title">Linked</h1>
-        <h1 class="title">List</h1>
-      </div>
-      <div class="link-data">
-        <input type="text" name="title" id="website-title" placeholder="Website Title" />
-        <input type="URL" name="url" id="website-url" placeholder="Website URL" />
-      </div>
-      <button class="enter-button">Enter</button> 
-    </header>
-    <section class="mainLinkContainer">
-
+    <section class="left-side">
+      <section "left-side-container">
+        <header>
+          <h1>Linked <img src='./images/linked-list-logo.svg'/> List</h1>
+        </header>
+        <section class="website-info">
+          <input type="text" name="title" id="website-title" placeholder="Website Title" />
+          <input type="URL" name="url" id="website-url" placeholder="Website URL" />
+        </section>
+        <button class="enter-button">Enter</button>
+      </section>
+    </section>
+    <section class="right-side">
+      <article class="link-info-container">
+        <div class="link-info">
+          <h2 class="link-title">Title</h2>
+          <a href="URL" class="link-url">URL</a>
+        </div>
+        <div class="link-info-buttons">
+          <button class="link-read">Read</button>
+          <button class="link-delete">Delete</button>
+        </div>
+      </article>
     </section>
     <footer>
     </footer>
