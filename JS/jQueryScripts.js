@@ -4,17 +4,16 @@ var enterButton = document.querySelector('.enter-button');
 // var deleteButton = document.querySelector('.link-delete');
 
 function grabTitle() {
-  console.log(document.getElementById('website-title').value);
-  return document.getElementByID('website-title').value;
+  return document.querySelector('.website-title').value;
 }
 function grabURL() {
-  console.log(document.getElementById('website-url').value);
-  return document.selectElementByID('website-url').value;
+  return document.querySelector('.website-url').value;
 }
 
 function ListedLink() {
   this.title = grabTitle();
   this.url = grabURL();
+  this.read = false;
   /*jshint multistr: true */
   this.rightSideCode = "<article class='link-info-container'>\
       <div class='link-info'>\
@@ -28,17 +27,11 @@ function ListedLink() {
         <button class='link-delete'>Delete</button>\
       </div>\
     </article>";
-    // this.createLinkBox = function() {
-    //   $('right-side').append(this.rightSideCode);
 }
 
-enterButton.addEventListener('click', function() {
+$('.enter-button').on('click', function() {
   var newLink = new ListedLink();
-  $('right-side').append(ListedLink.rightSideCode);
+  $('.right-side').append(newLink.rightSideCode);
+  linkCount = linkCount + 1;
+  console.log(linkCount);
 });
-
-
-// $('enter-button').click(function() {
-//   var newLink = new ListedLink();
-//   $('right-side').append(ListedLink.rightSideCode);
-// });

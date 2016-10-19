@@ -33,7 +33,7 @@ header img {
   width: 400px;
 }
 
-#website-title, #website-url {
+.website-title, .website-url {
   display: block;
   margin: 40px auto;
   width: 350px;
