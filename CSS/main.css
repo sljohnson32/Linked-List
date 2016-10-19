@@ -27,7 +27,7 @@ header img {
 }
 
 .left-side-container {
-  margin: 170px auto;
+  margin: 40% auto;
   width: 400px;
 }
 
@@ -58,33 +58,56 @@ header img {
 
 .link-info-container {
   border: 2px solid #607D8B;
-  width: 80%;
+  width: 90%;
   text-align: center;
-  margin: 25px auto;
+  margin: 20px auto;
   background: white;
 }
 
 .link-info {
   padding: 15px;
   text-align: left;
+  padding-bottom: 0;
+  min-width: 300px;
 }
 
 .link-title {
   color: #455A64;
   font-weight: bold;
+  margin-top: 5px;
   margin-bottom: 15px;
 }
 
-.link-url {
+a:link {
   color: #607D8D;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
+  text-decoration: none;
 }
 
-hr {
+a:hover {
+  font-weight: bolder;
+  color: #455A64;
+  border-bottom-color: #FFC107;
+}
+
+.hr1 {
   background: #CFD8DC;
   border: 0;
   height: 1px;
-  margin: 15px 0;
+  margin: 10px 0 15px;
+}
+
+.hr2 {
+  background: #CFD8DC;
+  border: 0;
+  height: 1px;
+  margin: 10px 0 5px;
+  }
+
+}
+
+.link-info-buttons {
+  width: 80%;
 }
 
 .link-read, .link-delete {
@@ -96,13 +119,13 @@ hr {
 }
 
 .link-read {
-  left: 0;
-  bottom: 0;
+  margin-right: 70%;
 }
 
-.link-delete {
-  right:0;
-  bottom: 0;
+.link-info-buttons:hover {
+  font-weight: bolder;
+  color: #455A64;
+  border-bottom-color: #FFC107;
 }
 
 @media screen and (max-width: 400px) {
