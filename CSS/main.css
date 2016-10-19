@@ -44,6 +44,11 @@ header img {
   padding: 5px 0 5px 8px;
 }
 
+.website-title:focus, .website-url:focus {
+  outline: 4px solid gray;
+}
+
+
 .enter-button {
   background: #FFC107;
   color: #FFF;
@@ -59,6 +64,10 @@ header img {
 
 .enter-button:active {
   background-color: ##ffac07;
+}
+
+.enter-button:focus {
+  outline: 4px solid gray;
 }
 
 .enter-button:disabled,
@@ -140,8 +149,21 @@ header img {
 .link-read:hover, .link-delete:hover {
   font-weight: bolder;
   color: #455A64;
-  text-decoration: none;
   border-bottom: 1px solid #FFC107;
+}
+
+.link-read.true {
+  font-weight: bolder;
+  color: #F05A28;
+  border: none;
+}
+
+.link-read.true:hover {
+  border-bottom: 1px solid #FFC107;
+}
+
+a:active button:active {
+  outline: 0;
 }
 
 @media screen and (max-width: 400px) {
