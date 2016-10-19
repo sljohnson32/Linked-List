@@ -98,8 +98,8 @@ header img {
 .link-url:link {
   color: #607D8D;
   margin-bottom: 15px;
-  text-decoration: underline;
-  border-bottom-color: #F2F4F4;
+  text-decoration: none;
+  border-bottom: 1px solid #F2F4F4;
 }
 
 .link-url:hover {
@@ -120,12 +120,6 @@ header img {
   border: 0;
   height: 1px;
   margin: 10px 0 5px;
-  }
-
-}
-
-.link-info-buttons {
-  width: 80%;
 }
 
 .link-read, .link-delete {
@@ -135,6 +129,8 @@ header img {
   color: #455A64;
   margin-bottom: 5px;
   font-size: 90%;
+  text-decoration: none;
+  border-bottom: 1px solid #F2F4F4;
 }
 
 .link-read {
@@ -144,8 +140,8 @@ header img {
 .link-read:hover, .link-delete:hover {
   font-weight: bolder;
   color: #455A64;
-  text-decoration: underline;
-  text-decoration-color #FFC107;
+  text-decoration: none;
+  border-bottom: 1px solid #FFC107;
 }
 
 @media screen and (max-width: 400px) {
