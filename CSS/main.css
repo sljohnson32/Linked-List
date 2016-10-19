@@ -65,24 +65,44 @@ header img {
 }
 
 .link-info {
-  padding: 10px;
+  padding: 15px;
   text-align: left;
 }
 
 .link-title {
   color: #455A64;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .link-url {
   color: #607D8D;
+  margin-bottom: 25px;
 }
 
 hr {
   background: #CFD8DC;
   border: 0;
   height: 1px;
+  margin: 15px 0;
+}
+
+.link-read, .link-delete {
+  border: 0;
+  padding:none;
+  background: none;
+  color: #455A64;
+  margin-bottom: 5px;
+}
+
+.link-read {
+  left: 0;
+  bottom: 0;
+}
+
+.link-delete {
+  right:0;
+  bottom: 0;
 }
 
 @media screen and (max-width: 400px) {
