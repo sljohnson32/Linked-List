@@ -39,16 +39,33 @@ header img {
   height: 30px;
   font-size: 125%;
   font-weight: lighter;
+  border: none;
+  padding: 5px;
 }
 
 .enter-button {
   background: #FFC107;
   color: #FFF;
-  width: 300px;
-  height: 30px;
+  width: 310px;
+  height: 38px;
   border: none;
   font-size: 100%;
 }
+
+.enter-button:hover {
+  background-color: #FFD773;
+}
+
+.enter-button:active {
+  background-color: ##ffac07;
+}
+
+.enter-button:disabled,
+.enter-button[disabled]:active,
+.enter-button[disabled]:hover {
+  background: #FFD773;
+}
+
 
 .right-side {
   right: 0;
@@ -78,12 +95,13 @@ header img {
   margin-bottom: 15px;
 }
 
-a:link {
+.link-url:link {
   color: #607D8D;
   margin-bottom: 15px;
+  text-decoration: none;
 }
 
-a:hover {
+.link-url:hover {
   font-weight: bolder;
   color: #455A64;
   border-bottom-color: #FFC107;
