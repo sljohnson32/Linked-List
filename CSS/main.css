@@ -119,12 +119,12 @@ header img {
   background: #CFD8DC;
   border: 0;
   height: 1px;
-  margin: 10px 0 5px;
+  margin: 15px 0 5px;
 }
 
 .link-read, .link-delete {
   border: 0;
-  padding:none;
+  padding: 0 0 1px;
   background: none;
   color: #455A64;
   margin-bottom: 5px;
@@ -134,7 +134,7 @@ header img {
 }
 
 .link-read {
-  margin-right: 62%;
+  margin-right: 68%;
 }
 
 .link-read:hover, .link-delete:hover {
