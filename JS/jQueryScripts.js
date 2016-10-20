@@ -1,4 +1,4 @@
-var linkCount = 100;
+// var linkCount = 100;
 // var enterButton = document.querySelector('.enter-button');
 // var readButton = document.querySelector('.link-read');
 // var deleteButton = document.querySelector('.link-delete');
@@ -35,8 +35,6 @@ function LinkedList() {
 $('.enter-button').on('click', function() {
   var newLink = new LinkedList();
   $('.right-side').append(newLink.rightSideCode);
-  linkCount = linkCount + 1;
-  console.log(linkCount);
 });
 
 $('.right-side').on('click', '.link-read',function() {
