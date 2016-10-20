@@ -19,6 +19,15 @@ function getAnalytics() {
     $('.read').text(readLinks);
 });}
 
+function inputComplete() {
+  if (grabTitle() !== "" && grabURL() !== "") {
+    return true;
+  }
+    else {
+      return false;
+    }
+}
+
 function LinkedList() {
   this.title = grabTitle();
   this.url = grabURL();
@@ -38,7 +47,7 @@ function LinkedList() {
 }
 
 $('.enter-button').on('click', function() {
-  if (grabTitle() === undefined || grabURL() === undefined) {
+  if (inputComplete() === false) {
     alert("Please enter a website name AND valid URL to add your link.");
   }
     else {
@@ -52,17 +61,22 @@ $('.enter-button').on('click', function() {
 
 $('.right-side').on('click', '.link-read',function() {
   $(this).toggleClass('true');
+  readLinks = $('.true').length;
   getAnalytics();
 });
 
 $('.right-side').on('click', '.link-delete', function() {
   $(this).parent().parent().remove();
   linkCount = linkCount - 1;
+  readLinks = $('.true').length;
   getAnalytics();
 });
 
 $('.website-info').on('keyup change',function() {
-  if (grabTitle() !== undefined && grabURL !== undefined) {
+  if (inputComplete() === true) {
     $('.enter-button').attr('disabled', false);
   }
+    else {
+      $('.enter-button').attr('disabled', true);
+    }
 });
