@@ -1,7 +1,6 @@
-// var linkCount = 100;
-// var enterButton = document.querySelector('.enter-button');
-// var readButton = document.querySelector('.link-read');
-// var deleteButton = document.querySelector('.link-delete');
+var linkCount = 0;
+var readLinks = 0;
+var unReadLinks = linkCount - readLinks;
 
 function grabTitle() {
   return (document.querySelector('.website-title').value);
@@ -9,6 +8,13 @@ function grabTitle() {
 function grabURL() {
   return document.querySelector('.website-url').value;
 }
+
+function getAnalytics() {
+  $('.full-page').on('click', function() {
+    $('.total-links').text(linkCount);
+    $('.unread').text(linkCount - readLinks);
+    $('.read').text(readLinks);
+});}
 
 function LinkedList() {
   this.title = grabTitle();
@@ -28,19 +34,26 @@ function LinkedList() {
     </article>";
 }
 
-// LinkedList.prototype.readFunction = function() {
-//   $('.link-read').on(click, function() {
-//     this.read = !this.read;
-
 $('.enter-button').on('click', function() {
-  var newLink = new LinkedList();
-  $('.right-side').append(newLink.rightSideCode);
+  if (grabTitle() === undefined || grabURL() === undefined) {
+    alert("Please enter a website name AND valid URL to add your link.");
+  }
+    else {
+      var newLink = new LinkedList();
+      $('.right-side').append(newLink.rightSideCode);
+      linkCount = linkCount + 1;
+      getAnalytics();
+      console.log(linkCount);
+    }
 });
 
 $('.right-side').on('click', '.link-read',function() {
   $(this).toggleClass('true');
+  getAnalytics();
 });
 
 $('.right-side').on('click', '.link-delete', function() {
   $(this).parent().parent().remove();
+  linkCount = linkCount - 1;
+  getAnalytics();
 });
