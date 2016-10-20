@@ -1,6 +1,9 @@
 var linkCount = 0;
 var readLinks = 0;
 var unReadLinks = linkCount - readLinks;
+var enterButton = document.querySelector('.enter-button');
+
+enterButton.disabled = true;
 
 function grabTitle() {
   return (document.querySelector('.website-title').value);
@@ -56,4 +59,10 @@ $('.right-side').on('click', '.link-delete', function() {
   $(this).parent().parent().remove();
   linkCount = linkCount - 1;
   getAnalytics();
+});
+
+$('.website-info').on('keyup change',function() {
+  if (grabTitle() !== undefined && grabURL !== undefined) {
+    $('.enter-button').attr('disabled', false);
+  }
 });
