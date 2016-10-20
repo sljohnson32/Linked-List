@@ -47,16 +47,11 @@ function LinkedList() {
 }
 
 $('.enter-button').on('click', function() {
-  if (inputComplete() === false) {
-    alert("Please enter a website name AND valid URL to add your link.");
-  }
-    else {
-      var newLink = new LinkedList();
-      $('.right-side').append(newLink.rightSideCode);
-      linkCount = linkCount + 1;
-      getAnalytics();
-      console.log(linkCount);
-    }
+  var newLink = new LinkedList();
+  $('.right-side').append(newLink.rightSideCode);
+  linkCount = linkCount + 1;
+  getAnalytics();
+  console.log(linkCount);
 });
 
 $('.right-side').on('click', '.link-read',function() {
