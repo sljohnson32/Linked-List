@@ -29,7 +29,7 @@ header img {
 }
 
 .left-side-container {
-  margin: 30% auto 12%;
+  margin: 110px auto 30px;
   width: 400px;
 }
 
@@ -52,7 +52,7 @@ header img {
 .enter-button {
   background: #FFC107;
   color: #FFF;
-  width: 355px;
+  width: 356px;
   height: 35px;
   border: none;
   font-size: 100%;
@@ -80,7 +80,8 @@ header img {
   display: flex;
   justify-content: center;
   justify-content: space-around;
-  margin: 0 10%;
+  width: 350px;
+  margin: 5px auto;
   color: white;
 }
 
@@ -90,14 +91,14 @@ header img {
 
 .link-counter h2 {
   text-decoration: underline;
-  font-size: large;
+  font-size: medium;
   font-weight: bolder;
 }
 
 .link-counter h3 {
   text-decoration: underline;
   font-size: medium;
-  font-weight: bolder;
+  font-weight: normal;;
 }
 
 .link-counter h2, .link-counter h3 {
@@ -194,14 +195,92 @@ a:active button:active {
   outline: 0;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 800px) {
 
   .left-side, .right-side {
     margin: 0 auto;
   }
 
   .left-side {
-    position: relative;
+    position: static;
+    display: block;
+    width: 100%;
+    height: 40%;
+  }
+
+  header {
+    width: 320px;
+    margin: auto;
+  }
+
+  header h1 {
+    color: #FFF;
+    font-size: 260%;
+    font-weight: bolder;
+    padding: 20px 0 5px;
+    margin: 0;
+  }
+  header img {
+    height: 18%;
+    width: 18%;
+  }
+
+  .left-side-container {
+    margin: 0 auto;
+    min-width: 100%;
+  }
+
+  .website-title, .website-url {
+      margin: 20px auto;
+  }
+
+  .enter-button {
+    height: 35px;
+    margin-bottom: 15px;
+  }
+
+  .right-side {
+    display: block;
+    width: 100%;
+    min-height: 60%;
+    right: none;
+  }
+
+  .link-info-container {
+    border: 2px solid #607D8B;
+    width: 355px;
+    text-align: center;
+    margin: 10px auto;
+    background: white;
+  }
+
+  .link-info {
+    padding: 15px;
+    text-align: left;
+    padding-bottom: 0;
+    width: 90%;
+  }
+
+  .link-title {
+    color: #455A64;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+
+  .link-counter {
+    margin-bottom: 15px;
+
+}
+
+@media screen and (max-width: 399px) {
+
+  .left-side, .right-side {
+    margin: 0 auto;
+  }
+
+  .left-side {
+    position: static;
     display: block;
     width: 100%;
     height: 50%;
@@ -253,9 +332,9 @@ a:active button:active {
 
   .link-info-container {
     border: 2px solid #607D8B;
-    width: 90%;
+    width: 80%;
     text-align: center;
-    margin: 10px auto;
+    margin: 5px auto;
     background: white;
   }
 
@@ -275,5 +354,6 @@ a:active button:active {
 
   .link-counter {
     margin-bottom: 15px;
+    width: 80%;
 
 }
