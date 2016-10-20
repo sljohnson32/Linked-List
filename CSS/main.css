@@ -247,7 +247,7 @@ a:active button:active {
   .right-side {
     display: block;
     width: 100%;
-    height: 60%;
+    min-height: 60%;
     right: none;
   }
 
