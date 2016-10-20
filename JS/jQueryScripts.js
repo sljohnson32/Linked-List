@@ -1,19 +1,18 @@
-var linkCount = 0;
-var enterButton = document.querySelector('.enter-button');
+var linkCount = 100;
+// var enterButton = document.querySelector('.enter-button');
 // var readButton = document.querySelector('.link-read');
 // var deleteButton = document.querySelector('.link-delete');
 
 function grabTitle() {
-  return document.querySelector('.website-title').value;
+  return (document.querySelector('.website-title').value);
 }
 function grabURL() {
   return document.querySelector('.website-url').value;
 }
 
-function ListedLink() {
+function LinkedList() {
   this.title = grabTitle();
   this.url = grabURL();
-  this.read = false;
   /*jshint multistr: true */
   this.rightSideCode = "<article class='link-info-container'>\
       <div class='link-info'>\
@@ -29,9 +28,21 @@ function ListedLink() {
     </article>";
 }
 
+// LinkedList.prototype.readFunction = function() {
+//   $('.link-read').on(click, function() {
+//     this.read = !this.read;
+
 $('.enter-button').on('click', function() {
-  var newLink = new ListedLink();
+  var newLink = new LinkedList();
   $('.right-side').append(newLink.rightSideCode);
   linkCount = linkCount + 1;
   console.log(linkCount);
+});
+
+$('.right-side').on('click', '.link-read',function() {
+  $(this).toggleClass('true');
+});
+
+$('.right-side').on('click', '.link-delete', function() {
+  $(this).parent().parent().remove();
 });
